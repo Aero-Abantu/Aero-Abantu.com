@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "AeroAbantu",
+    "slug": "AeroAbantu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.aeroabantu",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "AeroAbantu needs your location to help you in emergencies.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "AeroAbantu needs your location even in the background to provide continuous emergency monitoring.",
+        "NSMicrophoneUsageDescription": "AeroAbantu needs microphone access to detect SOS voice commands.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.yourname.aeroabantu",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "RECORD_AUDIO",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow AeroAbantu to access the microphone for voice commands."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysPermission": "Allow AeroAbantu to use your location at all times."
+        }
+      ],
+      "expo-mail-composer"
+    ]
+  }
+}
